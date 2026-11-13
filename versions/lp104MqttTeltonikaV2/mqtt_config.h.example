@@ -1,0 +1,20 @@
+/*
+ * mqtt_config.h.example — Plantilla de configuración MQTT (VERSIONABLE)
+ *
+ * Copia este archivo a mqtt_config.h y rellena los valores reales:
+ *     cp mqtt_config.h.example mqtt_config.h
+ *
+ * mqtt_config.h está en .gitignore y NUNCA debe versionarse.
+ *
+ * V2.1: las credenciales (user/pass) NO se compilan. Se leen en runtime
+ * desde /etc/lp104mqttv2.conf (ver lp104mqttv2.conf.example). Aquí solo
+ * quedan los defaults de conexión NO sensibles.
+ */
+#ifndef MQTT_CONFIG_H
+#define MQTT_CONFIG_H
+
+#define MQTT_BROKER   "YOUR_BROKER_HOST"
+#define MQTT_PORT     1886
+#define MQTT_CLIENT   "YOUR_MQTT_CLIENT_ID"
+
+#endif /* MQTT_CONFIG_H */

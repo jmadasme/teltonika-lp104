@@ -1,0 +1,22 @@
+# Configuración de lp104mqttv2 (formato clave=valor). Cambios NO requieren
+# recompilar: edita este archivo en el router (/etc/lp104mqttv2.conf) y
+# reinicia el proceso.
+#
+# Copia este archivo al router como /etc/lp104mqttv2.conf y rellena los
+# valores reales. Las claves son case-sensitive.
+#
+# user=  -> usuario MQTT del broker
+# pass=  -> password MQTT del broker (NUNCA se loguea)
+#
+# Opcionales (si se omiten, se usan los valores compilados en mqtt_config.h):
+# client_id=...
+# broker=...
+# port=...
+
+user=YOUR_MQTT_USERNAME
+pass=YOUR_MQTT_PASSWORD
+
+# Ejemplo de opcionales (descomentar para sobreescribir los defaults):
+#client_id=YOUR_MQTT_CLIENT_ID
+#broker=YOUR_BROKER_HOST
+#port=1886

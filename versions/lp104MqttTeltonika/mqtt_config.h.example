@@ -1,0 +1,20 @@
+/*
+ * mqtt_config.h.example — Plantilla de credenciales MQTT (VERSIONADA)
+ *
+ * Copia este archivo a `mqtt_config.h` y rellena los valores reales.
+ * `mqtt_config.h` está en .gitignore y NUNCA debe versionarse.
+ *
+ *   cp mqtt_config.h.example mqtt_config.h
+ *   # editar mqtt_config.h con las credenciales reales
+ *   make
+ */
+#ifndef MQTT_CONFIG_H
+#define MQTT_CONFIG_H
+
+#define MQTT_BROKER   "YOUR_BROKER_HOST"
+#define MQTT_PORT     1886
+#define MQTT_USERNAME "YOUR_USERNAME"
+#define MQTT_PASSWORD "YOUR_PASSWORD"
+#define MQTT_CLIENT   "YOUR_CLIENT_ID"
+
+#endif /* MQTT_CONFIG_H */

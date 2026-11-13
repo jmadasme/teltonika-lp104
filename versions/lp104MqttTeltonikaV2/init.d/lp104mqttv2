@@ -1,0 +1,36 @@
+#!/bin/sh /etc/rc.common
+# init.d/lp104mqttv2 — servicio procd del cliente MQTT V2 (Teltonika RUT200)
+#
+# Instalación (la hace `make install`):
+#   cp lp104mqttv2   /usr/local/bin/lp104mqttv2
+#   cp lp104mqttv2   /etc/init.d/lp104mqttv2   && chmod +x /etc/init.d/lp104mqttv2
+#   /etc/init.d/lp104mqttv2 enable && /etc/init.d/lp104mqttv2 start
+#
+# El binario se instala en /usr/local/bin (overlay rw persistente en RUT200).
+# Arranca tarde (START=95) para que la red esté disponible; procd reintenta
+# con respawn y el propio binario aplica backoff 5->60 s si el broker no
+# responde.
+
+START=95
+STOP=10
+USE_PROCD=1
+
+PROG=/usr/local/bin/lp104mqttv2
+
+start_service() {
+    [ -x "$PROG" ] || {
+        logger -t lp104mqttv2 "binario no encontrado o no ejecutable: $PROG"
+        return 1
+    }
+
+    procd_open_instance
+    procd_set_param command "$PROG"
+    procd_set_param stdout 1
+    procd_set_param stderr 1
+    procd_set_param respawn 3600 5 5
+    procd_close_instance
+}
+
+stop_service() {
+    logger -t lp104mqttv2 "deteniendo lp104mqttv2"
+}
