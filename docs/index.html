@@ -134,14 +134,15 @@ h2{font-size:clamp(30px,4vw,46px);line-height:1.05;letter-spacing:-.04em;margin:
   .stat{border-right:0;border-bottom:1px solid var(--line)}
   h1{font-size:42px}
 }
-</style>
+.gate{display:grid;grid-template-columns:1.35fr .85fr;gap:26px;align-items:center;border:1px solid var(--line);border-radius:20px;padding:26px;background:linear-gradient(135deg,rgba(42,157,143,.12),rgba(69,123,157,.08));margin:22px 0 24px}.gate-badge{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.16em;color:var(--accent);border:1px solid rgba(42,157,143,.35);padding:6px 10px;border-radius:999px;margin-bottom:12px}.gate-actions{display:flex;flex-direction:column;gap:10px;align-items:stretch}.version.private{border-style:dashed;background:linear-gradient(180deg,rgba(11,34,43,.55),rgba(6,20,27,.7))}.version .state{font-family:var(--mono);font-size:9px;letter-spacing:.12em;padding:4px 8px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}.state.pub{color:#2A9D8F;border-color:rgba(42,157,143,.4);background:rgba(42,157,143,.08)}.state.priv{color:#9ab;border-color:rgba(91,124,153,.45);background:rgba(91,124,153,.08)}.private-link{color:#9ab;cursor:pointer}@media(max-width:820px){.gate{grid-template-columns:1fr}}</style>
 <link rel="stylesheet" href="assets/community.css?v=1">
 </head>
 <body>
 <header class="nav"><div class="wrap nav-in">
   <a class="brand" href="/"><span class="brand-mark"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 9 5-9 5-9-5 9-5z"/><path d="m3 12 9 5 9-5M3 17l9 5 9-5"/></svg></span><span>jmadasme<span style="color:var(--accent)">.</span>portfolio</span></a>
   <nav class="nav-links">
-    <a href="#proyecto">Proyecto</a><a href="#versiones">Versiones</a><a href="#stack">Stack</a><a href="#docs">Docs</a><a href="#comunidad">Comunidad</a>
+    <a href="#proyecto">Proyecto</a><a href="#versiones">Versiones</a>
+      <a href="#acceso">Acceso</a><a href="#stack">Stack</a><a href="#docs">Docs</a><a href="#comunidad">Comunidad</a>
     <a class="btn btn-ghost" style="padding:9px 15px" href="/iot/">← IoT</a>
   </nav>
 </div></header>
@@ -155,7 +156,7 @@ h2{font-size:clamp(30px,4vw,46px);line-height:1.05;letter-spacing:-.04em;margin:
       <a class="btn btn-primary" href="https://github.com/jmadasme/teltonika-lp104" target="_blank" rel="noopener">Ver el repositorio <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <a class="btn btn-ghost" href="#versiones">Explorar versiones</a>
     </div>
-    <div class="badges"><span class="badge">MIT</span><span class="badge">IoT &amp; Hardware</span><span class="badge">2 versiónes</span><span class="badge">GitHub Pages</span></div>
+    <div class="badges"><span class="badge">MIT</span><span class="badge">IoT &amp; Hardware</span><span class="badge">2 versiones · 1 privada</span><span class="badge">GitHub Pages</span></div>
   </div>
   <div class="hero-visual">
     <div class="visual-frame"><img src="assets/architecture.svg" alt="Árbol de versiones de Teltonika LP104"></div>
@@ -164,7 +165,7 @@ h2{font-size:clamp(30px,4vw,46px);line-height:1.05;letter-spacing:-.04em;margin:
   </div>
 </div></section>
 
-<section class="stats"><div class="wrap stats-grid"><div class="stat"><div class="stat-num">2</div><div class="stat-label">versiones</div></div><div class="stat"><div class="stat-num">MQTT 3.1.1</div><div class="stat-label">protocolo</div></div><div class="stat"><div class="stat-num">1</div><div class="stat-label">router</div></div><div class="stat"><div class="stat-num">0</div><div class="stat-label">nube propia</div></div></div></section>
+<section class="stats"><div class="wrap stats-grid"><div class="stat"><div class="stat-num">2</div><div class="stat-label">versiones</div></div><div class="stat"><div class="stat-num">1</div><div class="stat-label">pública</div></div><div class="stat"><div class="stat-num">1</div><div class="stat-label">privada</div></div><div class="stat"><div class="stat-num">1</div><div class="stat-label">licencia</div></div></div></section>
 
 <section class="section" id="proyecto"><div class="wrap">
   <div class="section-head reveal"><div class="kicker">01 — El proyecto</div><h2>Qué resuelve</h2><p class="section-sub">Cliente MQTT 3.1.1 compilado para el router Teltonika RUT200. La primera versión lleva la configuración compilada; la V2 la mueve a /etc/lp104mqttv2.conf e incluye Makefile y guía de ZeroTier.</p></div>
@@ -175,15 +176,29 @@ h2{font-size:clamp(30px,4vw,46px);line-height:1.05;letter-spacing:-.04em;margin:
 </div></section>
 
 <section class="section" id="versiones"><div class="wrap">
-  <div class="section-head reveal"><div class="kicker">02 — Versiones</div><h2>La historia, completa.</h2><p class="section-sub">Cada carpeta conserva una etapa del proyecto. No se borraron las anteriores: se pusieron en contexto.</p></div>
+  <div class="section-head reveal"><div class="kicker">02 — Versiones</div><h2>Una puerta abierta. La evolución, bajo llave.</h2>
+  <p class="section-sub">La primera etapa queda libre para probar el camino. Las siguientes conservan el refinamiento, la depuración y el rendimiento: se comparten solo a quien las pide.</p></div>
+  <div class="gate reveal" id="acceso">
+    <div>
+      <span class="gate-badge">MODELO DE ACCESO</span>
+      <h3>2 versiones · 1 pública · 1 privada</h3>
+      <p>La primera versión es gratuita y abierta. <strong>Última versión: privada.</strong> Las mejoras, optimizaciones y variantes de hardware no se regalan de forma anónima: se solicitan, se conversan y se entregan con un alcance claro.</p>
+    </div>
+    <div class="gate-actions">
+      <a class="btn btn-primary" href="https://github.com/jmadasme/teltonika-lp104/issues/new?template=solicitud-acceso.yml&title=Solicitud%20de%20acceso%20a%20versiones%20privadas" target="_blank" rel="noopener">Solicitar acceso / licencia</a>
+      <a class="btn btn-ghost" href="#docs">Ver README y documentación</a>
+    </div>
+  </div>
   <div class="versions"><article class="version reveal">
   <div class="version-top"><h3>lp104MqttTeltonika</h3><span class="count">10 archivos</span></div>
+  <div style="margin-bottom:8px"><span class="state pub">PÚBLICA</span></div>
   <p>Cliente MQTT 3.1.1 en C para RUT200 con credenciales compiladas.</p>
-  <a href="https://github.com/jmadasme/teltonika-lp104/tree/main/versions/lp104MqttTeltonika" target="_blank" rel="noopener">Ver carpeta <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-</article><article class="version reveal">
+  <a href="versions/lp104MqttTeltonika/" target="_blank" rel="noopener">Ver carpeta <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</article><article class="version reveal private">
   <div class="version-top"><h3>lp104MqttTeltonikaV2</h3><span class="count">19 archivos</span></div>
+  <div style="margin-bottom:8px"><span class="state priv">PRIVADA</span></div>
   <p>V2.1: configuración en /etc/lp104mqttv2.conf, Makefile y guía de ZeroTier.</p>
-  <a href="https://github.com/jmadasme/teltonika-lp104/tree/main/versions/lp104MqttTeltonikaV2" target="_blank" rel="noopener">Ver carpeta <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+  <a class="private-link" href="https://github.com/jmadasme/teltonika-lp104/issues/new?template=solicitud-acceso.yml&title=Solicitud%20de%20acceso%20a%20versiones%20privadas" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg> Solicitar acceso</a>
 </article></div>
 </div></section>
 
@@ -202,7 +217,7 @@ h2{font-size:clamp(30px,4vw,46px);line-height:1.05;letter-spacing:-.04em;margin:
   <div class="stack-grid">
     <div class="reveal"><div class="chips"><span class="chip">C</span><span class="chip">MQTT</span><span class="chip">Teltonika RUT200</span><span class="chip">Make</span><span class="chip">ZeroTier</span></div><div class="note"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span>El SDK del router no se incluye. La configuración real y las credenciales deben crearse en el equipo, no en el repositorio.</span></div></div>
     <div class="terminal reveal"><div class="terminal-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div><pre>git clone https://github.com/jmadasme/teltonika-lp104.git
-cd teltonika-lp104/versions/lp104MqttTeltonikaV2
+cd teltonika-lp104/versions/lp104MqttTeltonika
 make
 # leé docs/datasheet.md para copiar binario y configuración al router</pre></div>
   </div>
