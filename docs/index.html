@@ -134,15 +134,83 @@ h2{font-size:clamp(30px,4vw,46px);line-height:1.05;letter-spacing:-.04em;margin:
   .stat{border-right:0;border-bottom:1px solid var(--line)}
   h1{font-size:42px}
 }
-.gate{display:grid;grid-template-columns:1.35fr .85fr;gap:26px;align-items:center;border:1px solid var(--line);border-radius:20px;padding:26px;background:linear-gradient(135deg,rgba(42,157,143,.12),rgba(69,123,157,.08));margin:22px 0 24px}.gate-badge{display:inline-block;font-family:var(--mono);font-size:10px;letter-spacing:.16em;color:var(--accent);border:1px solid rgba(42,157,143,.35);padding:6px 10px;border-radius:999px;margin-bottom:12px}.gate-actions{display:flex;flex-direction:column;gap:10px;align-items:stretch}.version.private{border-style:dashed;background:linear-gradient(180deg,rgba(11,34,43,.55),rgba(6,20,27,.7))}.version .state{font-family:var(--mono);font-size:9px;letter-spacing:.12em;padding:4px 8px;border-radius:999px;border:1px solid var(--line);color:var(--muted)}.state.pub{color:#2A9D8F;border-color:rgba(42,157,143,.4);background:rgba(42,157,143,.08)}.state.priv{color:#9ab;border-color:rgba(91,124,153,.45);background:rgba(91,124,153,.08)}.private-link{color:#9ab;cursor:pointer}@media(max-width:820px){.gate{grid-template-columns:1fr}}</style>
+
+/* ── Contenido heredado del proyecto original, en clave sobria ── */
+.rich{max-width:78ch}
+.rich p{margin:0 0 14px;color:#c3d4da}
+.rich h3{margin:26px 0 10px;font-size:19px;letter-spacing:-.02em}
+.rich h4{margin:22px 0 8px;font-size:15px;letter-spacing:-.01em}
+.rich ul,.rich ol{margin:0 0 16px;padding-left:22px;color:#c3d4da}
+.rich li{margin:0 0 6px}
+.rich figure{margin:22px 0;border:1px solid var(--line);border-radius:16px;padding:10px;background:rgba(11,34,43,.5)}
+.rich figure img{width:100%;display:block;border-radius:10px}
+.rich figcaption{font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:9px;line-height:1.5}
+.rich .table-wrap{overflow-x:auto;margin:18px 0;border:1px solid var(--line);border-radius:12px}
+.rich table{border-collapse:collapse;width:100%;font-size:13.5px}
+.rich th,.rich td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.rich th{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:rgba(11,34,43,.6)}
+.rich tr:last-child td{border-bottom:0}
+.rich pre{margin:18px 0;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:#04141a;overflow-x:auto;font-family:var(--mono);font-size:12px;line-height:1.6;color:#cfe3e8}
+.rich code{font-family:var(--mono);font-size:.92em}
+.rich .note{margin:18px 0;padding:13px 16px;border-left:2px solid var(--accent);background:rgba(42,157,143,.07);color:#c3d4da;font-size:14px}
+.rich .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:18px 0}
+.rich .card-grid .card{margin:0}
+
+
+.rich h3{margin:26px 0 8px}
+.rich p{margin:0 0 14px;color:var(--muted);line-height:1.7}
+.fail-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:6px}
+.fail{background:rgba(11,34,43,.55);border:1px solid var(--line);border-radius:14px;padding:18px}
+.fail .v{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--warm,#D6A86A)}
+.fail h3{font-size:16px;margin:8px 0 6px}
+.fail p{font-size:14px;margin:0;color:var(--muted)}
+.rating-head{display:flex;align-items:center;gap:20px;margin:6px 0 18px;padding:18px 20px;border:1px solid var(--line);border-radius:16px;background:rgba(11,34,43,.55)}
+.rating-avg{font-family:var(--mono);font-size:40px;line-height:1;color:var(--accent)}
+.rating-avg small{font-size:14px;color:var(--muted)}
+.rating-head p{margin:4px 0 0;font-size:14px;color:var(--muted);max-width:70ch}
+.rating{display:grid;gap:2px}
+.rating-row{display:grid;grid-template-columns:165px minmax(90px,1fr) 48px;gap:14px;align-items:center;padding:11px 0;border-bottom:1px solid var(--line)}
+.rating-row:last-child{border-bottom:0}
+.rating-name{font-size:13.5px;font-weight:600}
+.rating-bar{height:6px;border-radius:99px;background:rgba(148,190,200,.14);overflow:hidden}
+.rating-bar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,var(--accent),var(--accent2))}
+.rating-score{font-family:var(--mono);font-size:12.5px;color:var(--accent);text-align:right}
+.rating-note{grid-column:2/-1;font-size:12.5px;color:var(--muted);margin-top:-4px}
+.faq{display:grid;gap:0;margin-top:4px}
+.faq details{border-bottom:1px solid var(--line);padding:14px 0}
+.faq summary{cursor:pointer;font-weight:600;font-size:15px;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{content:"+";display:inline-block;width:18px;color:var(--accent);font-family:var(--mono)}
+.faq details[open] summary::before{content:"–"}
+.faq p{margin:10px 0 0 18px;font-size:14px;color:var(--muted)}
+@media(max-width:720px){
+  .fail-grid{grid-template-columns:1fr}
+  .rating-head{flex-direction:column;align-items:flex-start}
+  .rating-row{grid-template-columns:120px 1fr 44px}
+}
+
+
+.detail h2{margin:34px 0 10px;font-size:24px;letter-spacing:-.02em}
+.detail h3{margin:24px 0 8px;font-size:17px}
+.detail p{margin:0 0 14px;color:var(--muted);line-height:1.75}
+.detail ul,.detail ol{margin:0 0 16px 20px;color:var(--muted)}
+.detail li{margin:6px 0}
+.detail table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13.5px}
+.detail th,.detail td{border-bottom:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top}
+.detail th{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--accent)}
+.detail pre{background:rgba(6,20,27,.75);border:1px solid var(--line);border-radius:12px;padding:14px;overflow:auto;font-size:13px}
+.detail code{font-family:var(--mono);font-size:.92em}
+.detail img{max-width:100%;border-radius:12px;border:1px solid var(--line)}
+.detail blockquote{border-left:2px solid var(--accent);margin:14px 0;padding:2px 0 2px 16px;color:var(--muted)}
+
+</style>
 <link rel="stylesheet" href="assets/community.css?v=1">
 </head>
 <body>
 <header class="nav"><div class="wrap nav-in">
   <a class="brand" href="/"><span class="brand-mark"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 9 5-9 5-9-5 9-5z"/><path d="m3 12 9 5 9-5M3 17l9 5 9-5"/></svg></span><span>jmadasme<span style="color:var(--accent)">.</span>portfolio</span></a>
   <nav class="nav-links">
-    <a href="#proyecto">Proyecto</a><a href="#versiones">Versiones</a>
-      <a href="#acceso">Acceso</a><a href="#stack">Stack</a><a href="#docs">Docs</a><a href="#comunidad">Comunidad</a>
+    <a href="#proyecto">Proyecto</a><a href="#versiones">Versiones</a><a href="#stack">Stack</a><a href="#docs">Docs</a><a href="#comunidad">Comunidad</a>
     <a class="btn btn-ghost" style="padding:9px 15px" href="/iot/">← IoT</a>
   </nav>
 </div></header>
@@ -156,7 +224,7 @@ h2{font-size:clamp(30px,4vw,46px);line-height:1.05;letter-spacing:-.04em;margin:
       <a class="btn btn-primary" href="https://github.com/jmadasme/teltonika-lp104" target="_blank" rel="noopener">Ver el repositorio <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <a class="btn btn-ghost" href="#versiones">Explorar versiones</a>
     </div>
-    <div class="badges"><span class="badge">MIT</span><span class="badge">IoT &amp; Hardware</span><span class="badge">2 versiones · 1 privada</span><span class="badge">GitHub Pages</span></div>
+    <div class="badges"><span class="badge">MIT</span><span class="badge">IoT &amp; Hardware</span><span class="badge">2 versiónes</span><span class="badge">GitHub Pages</span></div>
   </div>
   <div class="hero-visual">
     <div class="visual-frame"><img src="assets/architecture.svg" alt="Árbol de versiones de Teltonika LP104"></div>
@@ -165,7 +233,7 @@ h2{font-size:clamp(30px,4vw,46px);line-height:1.05;letter-spacing:-.04em;margin:
   </div>
 </div></section>
 
-<section class="stats"><div class="wrap stats-grid"><div class="stat"><div class="stat-num">2</div><div class="stat-label">versiones</div></div><div class="stat"><div class="stat-num">1</div><div class="stat-label">pública</div></div><div class="stat"><div class="stat-num">1</div><div class="stat-label">privada</div></div><div class="stat"><div class="stat-num">1</div><div class="stat-label">licencia</div></div></div></section>
+<section class="stats"><div class="wrap stats-grid"><div class="stat"><div class="stat-num">2</div><div class="stat-label">versiones</div></div><div class="stat"><div class="stat-num">MQTT 3.1.1</div><div class="stat-label">protocolo</div></div><div class="stat"><div class="stat-num">1</div><div class="stat-label">router</div></div><div class="stat"><div class="stat-num">0</div><div class="stat-label">nube propia</div></div></div></section>
 
 <section class="section" id="proyecto"><div class="wrap">
   <div class="section-head reveal"><div class="kicker">01 — El proyecto</div><h2>Qué resuelve</h2><p class="section-sub">Cliente MQTT 3.1.1 compilado para el router Teltonika RUT200. La primera versión lleva la configuración compilada; la V2 la mueve a /etc/lp104mqttv2.conf e incluye Makefile y guía de ZeroTier.</p></div>
@@ -176,60 +244,1102 @@ h2{font-size:clamp(30px,4vw,46px);line-height:1.05;letter-spacing:-.04em;margin:
 </div></section>
 
 <section class="section" id="versiones"><div class="wrap">
-  <div class="section-head reveal"><div class="kicker">02 — Versiones</div><h2>Una puerta abierta. La evolución, bajo llave.</h2>
-  <p class="section-sub">La primera etapa queda libre para probar el camino. Las siguientes conservan el refinamiento, la depuración y el rendimiento: se comparten solo a quien las pide.</p></div>
-  <div class="gate reveal" id="acceso">
-    <div>
-      <span class="gate-badge">MODELO DE ACCESO</span>
-      <h3>2 versiones · 1 pública · 1 privada</h3>
-      <p>La primera versión es gratuita y abierta. <strong>Última versión: privada.</strong> Las mejoras, optimizaciones y variantes de hardware no se regalan de forma anónima: se solicitan, se conversan y se entregan con un alcance claro.</p>
-    </div>
-    <div class="gate-actions">
-      <a class="btn btn-primary" href="https://github.com/jmadasme/teltonika-lp104/issues/new?template=solicitud-acceso.yml&title=Solicitud%20de%20acceso%20a%20versiones%20privadas" target="_blank" rel="noopener">Solicitar acceso / licencia</a>
-      <a class="btn btn-ghost" href="#docs">Ver README y documentación</a>
-    </div>
-  </div>
+  <div class="section-head reveal"><div class="kicker">02 — Versiones</div><h2>La historia, completa.</h2><p class="section-sub">Cada carpeta conserva una etapa del proyecto. No se borraron las anteriores: se pusieron en contexto.</p></div>
   <div class="versions"><article class="version reveal">
   <div class="version-top"><h3>lp104MqttTeltonika</h3><span class="count">10 archivos</span></div>
-  <div style="margin-bottom:8px"><span class="state pub">PÚBLICA</span></div>
   <p>Cliente MQTT 3.1.1 en C para RUT200 con credenciales compiladas.</p>
-  <a href="versions/lp104MqttTeltonika/" target="_blank" rel="noopener">Ver carpeta <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-</article><article class="version reveal private">
+  <a href="https://github.com/jmadasme/teltonika-lp104/tree/main/versions/lp104MqttTeltonika" target="_blank" rel="noopener">Ver carpeta <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</article><article class="version reveal">
   <div class="version-top"><h3>lp104MqttTeltonikaV2</h3><span class="count">19 archivos</span></div>
-  <div style="margin-bottom:8px"><span class="state priv">PRIVADA</span></div>
   <p>V2.1: configuración en /etc/lp104mqttv2.conf, Makefile y guía de ZeroTier.</p>
-  <a class="private-link" href="https://github.com/jmadasme/teltonika-lp104/issues/new?template=solicitud-acceso.yml&title=Solicitud%20de%20acceso%20a%20versiones%20privadas" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg> Solicitar acceso</a>
+  <a href="https://github.com/jmadasme/teltonika-lp104/tree/main/versions/lp104MqttTeltonikaV2" target="_blank" rel="noopener">Ver carpeta <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
 </article></div>
 </div></section>
+<section class="section tight"><div class="wrap"><div class="section-head reveal"><div class="kicker">El concepto</div><h2>Qué es y por qué existe</h2></div><div class="rich reveal"><p>Cliente MQTT 3.1.1 escrito en C para el router Teltonika RUT200. Cada 30 segundos lee señal celular, usuarios WiFi asociados, carga de CPU y temperatura del módem, y publica un JSON en dos tópicos del broker. El binario es estático, MIPS, sin librerías externas, y corre como servicio procd con reconexión y backoff exponencial.</p><p>Apunta a instalaciones que ya tienen un RUT200 con datos móviles y necesitan telemetría sin agregar un dispositivo. La familia conserva dos versiones: la primera con la configuración compilada y la V2, que mueve las credenciales a /etc/lp104mqttv2.conf. La comparación es el aporte, porque muestra cómo un detalle de diseño —dónde viven los secretos— cambia el costo de operar el equipo.</p></div></div></section>
+<section class="section tight"><div class="wrap"><div class="section-head reveal"><div class="kicker">El proyecto en detalle</div><h2>Documentación preservada</h2><p class="section-sub">El README original de la versión de referencia, completo.</p></div><div class="detail rich reveal">
+<p><strong>Telemetría MQTT para routers Teltonika RUT200 — Cliente MQTT 3.1.1 en C puro para OpenWrt/RutOS</strong></p>
+<blockquote>
+<p><strong>Versión documentada: V2.1</strong> — Las credenciales MQTT ya <strong>no</strong> se compilan en el binario:
+se leen en tiempo de ejecución desde <code>/etc/lp104mqttv2.conf</code> en el router.
+Documentación actualizada tras el cambio V2.1 (auditado <strong>APROBADO — SIN INCIDENCIAS</strong>).</p>
+</blockquote>
+<hr/>
+<h2 id="tabla-de-contenidos">Tabla de contenidos</h2>
+<ul>
+<li><a href="#descripción">Descripción</a></li>
+<li><a href="#router-objetivo-y-especificaciones">Router objetivo y especificaciones</a></li>
+<li><a href="#principio-de-funcionamiento">Principio de funcionamiento</a></li>
+<li><a href="#diagrama-de-conexión">Diagrama de conexión</a></li>
+<li><a href="#métricas-recolectadas">Métricas recolectadas</a></li>
+<li><a href="#forma-de-operar">Forma de operar</a></li>
+<li><a href="#requisitos-previos">Requisitos previos</a></li>
+<li><a href="#cross-compilación">Cross-compilación</a></li>
+<li><a href="#transferencia-al-router">Transferencia al router</a></li>
+<li><a href="#instalación-como-servicio">Instalación como servicio</a></li>
+<li><a href="#despliegue-v21-make-deploy-v2">Despliegue V2.1: <code>make deploy-v2</code></a></li>
+<li><a href="#banner-ssh">Banner SSH</a></li>
+<li><a href="#configuración-etclp104mqttv2conf">Configuración: <code>/etc/lp104mqttv2.conf</code></a></li>
+<li><a href="#tabla-de-periféricos">Tabla de periféricos</a></li>
+<li><a href="#protocolo-de-comunicación-mqtt">Protocolo de comunicación MQTT</a></li>
+<li><a href="#ejemplos-de-uso-realistas">Ejemplos de uso realistas</a></li>
+<li><a href="#despliegue-completo-con-makefile">Despliegue completo con Makefile</a></li>
+<li><a href="#gestión-remota-por-zerotier-guía-de-flota">Gestión remota por ZeroTier</a></li>
+<li><a href="#advertencias-y-precauciones">Advertencias y precauciones</a></li>
+<li><a href="#referencias-oficiales-teltonika">Referencias oficiales Teltonika</a></li>
+<li><a href="#licencia">Licencia</a></li>
+</ul>
+<hr/>
+<h2 id="descripcion">Descripción</h2>
+<p><strong>lp104mqttv2</strong> es un cliente MQTT 3.1.1 implementado enteramente a mano en C, diseñado para
+ejecutarse en el router Teltonika RUT200 (RutOS/OpenWrt). El programa recopila telemetría del
+dispositivo — señal celular, usuarios WiFi conectados, carga de CPU y temperatura del módem —
+y la publica periódicamente vía MQTT hacia un broker remoto (<code>www.smartage.cl:1886</code>).</p>
+<p>El cliente MQTT no utiliza librerías externas (sin libmosquitto, sin paho). Todo el protocolo
+MQTT 3.1.1 se implementa byte a byte: paquetes CONNECT, CONNACK, PUBLISH (QoS 0), PINGREQ y
+PINGRESP se construyen y parsean directamente con <code>write()</code>/<code>read()</code> sobre un socket TCP.</p>
+<p><strong>Características principales:</strong></p>
+<ul>
+<li>Enlace estático completo (<code>-static</code>) — sin dependencias de bibliotecas compartidas</li>
+<li>Reconexión automática con backoff exponencial (5s → 60s)</li>
+<li>Keepalive MQTT con PINGREQ cada 30s (keepalive configurado a 60s)</li>
+<li>Manejo de señales POSIX (SIGTERM/SIGINT para apagado limpio, SIGPIPE ignorado)</li>
+<li><strong>V2.1</strong>: credenciales MQTT (<code>user</code>/<code>pass</code>) leídas en runtime desde <code>/etc/lp104mqttv2.conf</code>
+  — cambiarlas no requiere recompilar (ver <a href="#configuración-etclp104mqttv2conf">Configuración</a>)</li>
+<li>Compatibilidad con dashboard web existente (topic <code>report/online</code> = <code>"true"</code>)</li>
+<li>Banner SSH con información de diagnóstico (sin exponer ubicación del binario)</li>
+<li>Servicio procd con respawn automático (versión activa en producción)</li>
+</ul>
+<hr/>
+<h2 id="router-objetivo-y-especificaciones">Router objetivo y especificaciones</h2>
+<table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Modelo</strong></td>
+<td>Teltonika RUT200 (machine <code>Teltonika RUT2M</code>)</td>
+</tr>
+<tr>
+<td><strong>Serie</strong></td>
+<td>RUT2xx</td>
+</tr>
+<tr>
+<td><strong>Chipset / SoC</strong></td>
+<td>MediaTek MT7628AN (MIPS 24KEc, 580 MHz, little-endian)</td>
+</tr>
+<tr>
+<td><strong>Arquitectura</strong></td>
+<td><code>mipsel_24kc</code> — MIPS32 rel2, ELF32 little-endian, ABI o32</td>
+</tr>
+<tr>
+<td><strong>Target OpenWrt</strong></td>
+<td><code>ramips/mt76x8</code></td>
+</tr>
+<tr>
+<td><strong>Versión RutOS</strong></td>
+<td><code>RUT2M_R_00.07.22.3</code></td>
+</tr>
+<tr>
+<td><strong>Versión OpenWrt base</strong></td>
+<td>21.02.0</td>
+</tr>
+<tr>
+<td><strong>RAM</strong></td>
+<td>128 MB DDR2</td>
+</tr>
+<tr>
+<td><strong>Flash</strong></td>
+<td>16 MB SPI NOR (overlay rw en <code>/etc</code> y <code>/usr/local</code>)</td>
+</tr>
+<tr>
+<td><strong>Conectividad</strong></td>
+<td>4G LTE Cat 4 (módem Quectel EC200A), WiFi 2.4 GHz 802.11b/g/n (1 radio), 2x Ethernet</td>
+</tr>
+<tr>
+<td><strong>libc</strong></td>
+<td>musl (RutOS 7 / OpenWrt 21.02)</td>
+</tr>
+<tr>
+<td><strong>Modo del binario</strong></td>
+<td>ELF 32-bit LSB, MIPS32 rel2, estáticamente enlazado, strip (~95 KB)</td>
+</tr>
+<tr>
+<td><strong>Acceso SSH</strong></td>
+<td><code>root@192.168.1.2:22</code> — en el despliegue real: <code>root@192.168.194.229</code></td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Nota de temperatura</strong>: el MT7628AN <strong>no expone sensor térmico de CPU</strong> vía
+<code>/sys/class/thermal/thermal_zone*/temp</code>. La "Temperatura" que muestra el WebUI y la que
+publica este programa es la <strong>del módem celular</strong>, obtenible con <code>gsmctl -c</code>.</p>
+</blockquote>
+<hr/>
+<h2 id="principio-de-funcionamiento">Principio de funcionamiento</h2>
+<p>El programa opera con un ciclo de vida simple pero robusto (en producción corre como servicio
+procd). <strong>La carga de configuración es lo primero que hace <code>main()</code> después de las señales</strong>:</p>
+<pre><code>1. init_signals(): SIGTERM/SIGINT → shutdown limpio; SIGPIPE → ignorar
+2. config_load(&amp;g_cfg):                     ← V2.1
+   lee /etc/lp104mqttv2.conf (user, pass, opcionales client_id/broker/port).
+   Si falta el archivo → WARNING + ERROR visible; user/pass quedan vacíos.
+   NUNCA loguea la password.
+3. Construir tópicos con g_cfg.client_id:
+   {client_id}/report/online y {client_id}/report/status
+4. BUCLE PRINCIPAL (reconexión automática):
+   a. Resolver DNS del broker (g_cfg.broker) y conectar TCP (timeout 10s, TCP_NODELAY)
+   b. Enviar MQTT CONNECT (clean session, g_cfg.user, g_cfg.pass, keepalive 60s)
+   c. Esperar CONNACK (timeout 10s, validar rc=0)
+   d. Publicar reporte inicial (online="true" + JSON de telemetría)
+   e. BUCLE DE SESIÓN:
+      - poll() el socket con timeout hasta el próximo evento (30s)
+      - Leer/descartar datos entrantes (PINGRESP, etc.)
+      - Cada 30s: recolectar métricas y publicar reporte
+      - Si inactividad ≥ 30s: enviar PINGREQ
+      - Si write falla o poll indica error → salir del bucle de sesión
+   f. Cerrar socket, aplicar backoff exponencial 5→60s, volver al paso 4a
+</code></pre>
+<p><strong>Puntos clave del diseño:</strong></p>
+<ul>
+<li><strong>Sin librerías externas</strong>: MQTT con <code>socket()</code>, <code>connect()</code>, <code>write()</code>, <code>read()</code>, <code>poll()</code>,
+  <code>getaddrinfo()</code> — solo syscalls POSIX</li>
+<li><strong>Credenciales en runtime (V2.1)</strong>: el binario ya no contiene usuario/contraseña embebidos;
+  los lee de <code>/etc/lp104mqttv2.conf</code>. El fallo de configuración es <strong>visible</strong> (WARNING + ERROR,
+  y el broker rechaza el CONNECT), nunca silencioso. La password <strong>nunca</strong> se loguea.</li>
+<li><strong>Backoff exponencial</strong>: tras cada desconexión espera 5s, 10s, 20s... hasta 60s, con sleep
+  segundo a segundo para poder atender SIGTERM</li>
+<li><strong>Publicación dual</strong>: cada ciclo publica <code>report/online</code> (compatibilidad con el control web
+  existente) y <code>report/status</code> (JSON con toda la telemetría)</li>
+<li><strong>Métricas vía comandos del sistema</strong>: <code>gsmctl -q</code>, <code>gsmctl -c</code>, <code>iwinfo</code>,
+  <code>/bin/ls /sys/class/net/</code> y <code>/proc/stat</code> — sin bibliotecas adicionales, sin <code>system()</code> con
+  datos externos</li>
+</ul>
+<hr/>
+<h2 id="diagrama-de-conexion">Diagrama de conexión</h2>
+<pre><code>┌─────────────────────────────────────────────────────────────────────┐
+│                        INFRAESTRUCTURA MQTT                         │
+│                                                                     │
+│  ┌──────────────┐     MQTT 3.1.1     ┌──────────────────────────┐  │
+│  │   RUT200     │ ─────── TCP ──────▶ │   Broker MQTT            │  │
+│  │  (cliente)   │     puerto 1886     │   www.smartage.cl:1886   │  │
+│  │              │                     │                          │  │
+│  │  lp104mqttv2 │                     │   Tópicos:               │  │
+│  │              │                     │   ├─ {id}/report/online  │  │
+│  │  Config:     │                     │   └─ {id}/report/status  │  │
+│  │  /etc/lp104- │                     └───────────┬──────────────┘  │
+│  │  mqttv2.conf │                                 │                 │
+│  │              │                                 │ WebSocket/HTTP  │
+│  │  Métricas:   │                                 ▼                 │
+│  │  • gsmctl    │                     ┌──────────────────────┐    │
+│  │  • iwinfo    │                     │   Página Web / App   │    │
+│  │  • /proc/stat│                     │   (dashboard IoT)    │    │
+│  └──────────────┘                     │  Suscribe a:         │    │
+│                                       │  • {id}/report/*     │    │
+│                                       └──────────────────────┘    │
+└─────────────────────────────────────────────────────────────────────┘
+</code></pre>
+<p><strong>Flujo de datos:</strong> (1) el RUT200 ejecuta <code>lp104mqttv2</code> → (2) carga credenciales de
+<code>/etc/lp104mqttv2.conf</code> → (3) cada 30s recopila métricas y publica <code>report/online</code> +
+<code>report/status</code> (QoS 0) → (4) el broker reenvía a los suscriptores → (5) el dashboard web los
+muestra en tiempo real.</p>
+<hr/>
+<h2 id="metricas-recolectadas">Métricas recolectadas</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Métrica</th>
+<th>JSON key</th>
+<th>Fuente</th>
+<th>Parseo</th>
+<th>Valor si falla</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Señal celular</td>
+<td><code>signal</code></td>
+<td><code>/usr/sbin/gsmctl -q</code></td>
+<td>línea <code>RSSI: &lt;int&gt;</code>; si no, primer entero con signo</td>
+<td><code>null</code></td>
+</tr>
+<tr>
+<td>2</td>
+<td>Usuarios WiFi</td>
+<td><code>users</code></td>
+<td><code>iwinfo &lt;iface&gt; assoclist</code></td>
+<td>contar líneas MAC (<code>count_mac_lines</code>)</td>
+<td><code>null</code> o <code>0</code> (STA)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>% CPU</td>
+<td><code>cpu</code></td>
+<td><code>/proc/stat</code> (fopen directo)</td>
+<td>delta idle/total 64-bit entre 2 muestras (200 ms)</td>
+<td><code>null</code> (0.0 en 1ª muestra)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Temp. módem</td>
+<td><code>temp</code></td>
+<td><code>/usr/sbin/gsmctl -c</code></td>
+<td>décimas de °C ÷ 10.0 (<code>360</code> → <code>36.0</code>)</td>
+<td><code>null</code></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Timestamp</td>
+<td><code>ts</code></td>
+<td><code>time(NULL)</code></td>
+<td>epoch Unix</td>
+<td>siempre presente</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ejemplos de salida de comandos:</strong></p>
+<pre><code># gsmctl -q (LTE, RutOS 00.07.03+)
+RSSI: -60
+RSRP: -103
+SINR: 2
+RSRQ: -16
+# (en 2G/fallback puede devolver un único entero, p. ej. -55, o N/A)
 
-<section class="section tight"><div class="wrap">
-  <div class="section-head reveal"><div class="kicker">03 — Cómo se usa</div><h2>De la carpeta a la práctica.</h2></div>
-  <div class="timeline"><div class="step reveal"><div class="step-n">01</div><h4>Copiá el binario</h4><p>Compilado para la arquitectura del RUT200.</p></div><div class="step reveal"><div class="step-n">02</div><h4>Creá la configuración</h4><p>En V2, /etc/lp104mqttv2.conf con permisos restringidos.</p></div><div class="step reveal"><div class="step-n">03</div><h4>Verificá la red</h4><p>El router debe alcanzar el broker.</p></div><div class="step reveal"><div class="step-n">04</div><h4>Publicá y observá</h4><p>Confirmá el tópico y el formato del mensaje.</p></div></div>
-</div></section>
+# gsmctl -c → 360   (36.0 °C, temperatura del MÓDEM en décimas)
+# iwinfo wlan0 assoclist → una línea por estación MAC (xx:xx:xx:xx:xx:xx)
+</code></pre>
+<blockquote>
+<p><strong>Usuarios WiFi en este despliegue</strong>: el RUT200 tiene <code>wlan0-1</code> en modo <strong>STA</strong> (cliente), sin
+AP, por lo que <code>users</code> se publica como <code>0</code> (dato determinado, no <code>null</code>).</p>
+</blockquote>
+<p><strong>Ejemplo de JSON publicado cada 30s:</strong></p>
+<pre><code class="language-json">{"signal":-72,"users":0,"cpu":12.3,"temp":36.0,"ts":1758000000}
+</code></pre>
+<hr/>
+<h2 id="forma-de-operar">Forma de operar</h2>
+<p>En V2.1 hay <strong>dos estados</strong> posibles de operación:</p>
+<h3 id="a-servicio-activo-produccion-actual">A) Servicio activo (producción actual)</h3>
+<p>El servicio procd corre el binario de la versión anterior en <code>/usr/local/bin/lp104mqttv2</code>
+(credenciales antiguas embebidas). Comandos en el router:</p>
+<pre><code class="language-bash">/etc/init.d/lp104mqttv2 status      # estado
+logread | grep lp104mqttv2          # logs
+/etc/init.d/lp104mqttv2 restart     # reiniciar
+/etc/init.d/lp104mqttv2 stop        # detener
+</code></pre>
+<h3 id="b-nuevo-binario-v21-coexistencia-sin-ejecutar">B) Nuevo binario V2.1 (coexistencia, SIN ejecutar)</h3>
+<p>El binario V2.1 se transfiere a <strong><code>/usr/local/home/root/lp104mqttv2_v2</code></strong> (ruta temporal pedida
+por el usuario) y <strong>no se ejecuta</strong>; coexiste con el servicio activo. El usuario lo arranca
+manualmente cuando quiera:</p>
+<pre><code class="language-bash"># Foreground (logs en pantalla; Ctrl+C para salir)
+/usr/local/home/root/lp104mqttv2_v2
 
-<section class="section tight"><div class="wrap">
-  <div class="section-head reveal"><div class="kicker">04 — Decisiones</div><h2>Lo que lo hace distinto</h2></div>
-  <div class="features"><div class="feature reveal"><h4>C sin dependencias pesadas</h4><p>Pensado para un router.</p></div><div class="feature reveal"><h4>Configuración externa</h4><p>La V2 no requiere recompilar.</p></div><div class="feature reveal"><h4>Makefile</h4><p>Build reproducible para la toolchain.</p></div><div class="feature reveal"><h4>ZeroTier</h4><p>Guía para acceso remoto sin abrir puertos.</p></div><div class="feature reveal"><h4>MQTT 3.1.1</h4><p>Compatible con brokers estándar.</p></div><div class="feature reveal"><h4>Dos etapas</h4><p>Se puede comparar el enfoque compilado y el configurable.</p></div></div>
-</div></section>
+# En background (log a archivo)
+/usr/local/home/root/lp104mqttv2_v2 &gt;/tmp/lp104mqttv2_v2.log 2&gt;&amp;1 &amp;
+</code></pre>
+<blockquote>
+<p>⚠️ El binario <strong>v2 necesita</strong> <code>/etc/lp104mqttv2.conf</code> con <code>user=</code> y <code>pass=</code> (ver
+<a href="#configuración-etclp104mqttv2conf">Configuración</a>). Sin él arranca igualmente, pero el
+broker rechaza el CONNECT (fallo visible en logs).</p>
+</blockquote>
+<h3 id="sustitucion-controlada-opcional-posterior">Sustitución controlada (opcional, posterior)</h3>
+<p>Cuando el usuario valide la v2, puede reemplazar el binario activo y reiniciar el servicio:</p>
+<pre><code class="language-bash">cp /usr/local/home/root/lp104mqttv2_v2 /usr/local/bin/lp104mqttv2
+chmod +x /usr/local/bin/lp104mqttv2
+/etc/init.d/lp104mqttv2 restart
+logread | grep lp104mqttv2 | tail -10
+</code></pre>
+<hr/>
+<h2 id="requisitos-previos">Requisitos previos</h2>
+<h3 id="1-sdk-oficial-de-openwrt-21020-ramipsmt76x8">1. SDK oficial de OpenWrt 21.02.0 (ramips/mt76x8)</h3>
+<p>El SDK es <strong>obligatorio</strong> para cross-compilar. Sin él el Makefile no encontrará el toolchain.</p>
+<blockquote>
+<p>Para RutOS, el SDK oficial alternativo es el <strong>GPL Code Center</strong> de Teltonika
+(<code>RUT2M_R_GPL_00.07.x</code>), ABI-compatible con el SDK de OpenWrt 21.02.0 <code>ramips/mt76x8</code>
+(que es el que este proyecto usa y verifica).</p>
+</blockquote>
+<pre><code class="language-bash">cd /tmp/opencode/
+wget https://downloads.openwrt.org/releases/21.02.0/targets/ramips/mt76x8/openwrt-sdk-21.02.0-ramips-mt76x8_gcc-8.4.0_musl.Linux-x86_64.tar.xz
+tar xJf openwrt-sdk-21.02.0-ramips-mt76x8_gcc-8.4.0_musl.Linux-x86_64.tar.xz
+</code></pre>
+<blockquote>
+<p><strong>Referencias</strong>: <a href="https://wiki.teltonika-networks.com/view/Software_Development_Kit">Teltonika Wiki — Software Development Kit</a>
+· <a href="https://wiki.teltonika-networks.com/view/GPL_Code_Center">GPL Code Center</a></p>
+</blockquote>
+<h3 id="2-toolchain-correcta">2. Toolchain correcta</h3>
+<table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Valor correcto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Arquitectura</strong></td>
+<td>MIPS little-endian (<code>mipsel_24kc</code>)</td>
+</tr>
+<tr>
+<td><strong>Compilador</strong></td>
+<td><code>mipsel-openwrt-linux-musl-gcc</code> (gcc 8.4.0)</td>
+</tr>
+<tr>
+<td><strong>libc</strong></td>
+<td><strong>musl</strong> (RutOS 7 / OpenWrt 21.02)</td>
+</tr>
+<tr>
+<td><strong>Ruta toolchain</strong></td>
+<td><code>&lt;sdk&gt;/staging_dir/toolchain-mipsel_24kc_gcc-8.4.0_musl/bin/</code></td>
+</tr>
+<tr>
+<td><strong>STAGING_DIR</strong></td>
+<td><code>&lt;sdk&gt;/staging_dir</code> (obligatorio exportarlo)</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>⚠️ <strong>No confundir series</strong>: Legacy (<code>ar71xx</code>) usa uclibc; RUT9/RUT2 con RutOS 7 usan ath79
+MIPS; RUTX usa ARM <code>ipq40xx</code> (<code>arm-openwrt-linux-muslgnueabi-gcc</code>); este proyecto es
+<code>ramips/mt76x8</code> → mipsel + musl. <strong>Si compilas con <code>gcc</code> del sistema (x86-64) el binario
+dará <code>Exec format error</code> en el router.</strong> Verifica SIEMPRE con <code>file &lt;binario&gt;</code> que diga <code>MIPS</code>.</p>
+</blockquote>
+<h3 id="3-acceso-ssh-al-router">3. Acceso SSH al router</h3>
+<pre><code class="language-bash">ssh root@192.168.1.2        # en el despliegue real: ssh root@192.168.194.229
 
-<section class="section tight" id="stack"><div class="wrap">
-  <div class="section-head reveal"><div class="kicker">05 — Stack y arranque</div><h2>Con qué está construido</h2></div>
-  <div class="stack-grid">
-    <div class="reveal"><div class="chips"><span class="chip">C</span><span class="chip">MQTT</span><span class="chip">Teltonika RUT200</span><span class="chip">Make</span><span class="chip">ZeroTier</span></div><div class="note"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 4 4L19 6"/></svg><span>El SDK del router no se incluye. La configuración real y las credenciales deben crearse en el equipo, no en el repositorio.</span></div></div>
-    <div class="terminal reveal"><div class="terminal-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div><pre>git clone https://github.com/jmadasme/teltonika-lp104.git
-cd teltonika-lp104/versions/lp104MqttTeltonika
+cat /etc/rutos_version      # → RUT2M_R_00.07.22.3
+uname -m                    # → mips
+which gsmctl iwinfo         # utilidades de telemetría presentes
+</code></pre>
+<blockquote>
+<p>La password del router <strong>nunca</strong> viaja en archivos del repo: se pasa por variable de entorno
+<code>ROUTER_PASS</code> (con sshpass) o se usa clave SSH.</p>
+</blockquote>
+<hr/>
+<h2 id="cross-compilacion">Cross-compilación</h2>
+<h3 id="paso-1-configurar-el-entorno">Paso 1: Configurar el entorno</h3>
+<pre><code class="language-bash"># Exportar el staging dir del SDK (obligatorio para la toolchain)
+export STAGING_DIR=/home/jma/Documents/Proyects/OpenCode/AG.CreadorContenido/proyectos/lp104MqttTeltonika/sdk/openwrt-sdk-21.02.0-ramips-mt76x8_gcc-8.4.0_musl.Linux-x86_64/staging_dir
+export PATH=$PATH:$STAGING_DIR/toolchain-mipsel_24kc_gcc-8.4.0_musl/bin/
+</code></pre>
+<h3 id="paso-2-compilar">Paso 2: Compilar</h3>
+<pre><code class="language-bash">cd /home/jma/Documents/Proyects/OpenCode/AG.CreadorContenido/proyectos/lp104MqttTeltonikaV2/
+make clean
 make
-# leé docs/datasheet.md para copiar binario y configuración al router</pre></div>
-  </div>
-</div></section>
 
-<section class="section tight" id="docs"><div class="wrap">
-  <div class="section-head reveal"><div class="kicker">06 — Documentación</div><h2>Para usar y para entender.</h2><p class="section-sub">Cada documento está en el repositorio, versionado junto al código.</p></div>
-  <div class="docs"><a class="doc reveal" href="https://github.com/jmadasme/teltonika-lp104/blob/main/docs/datasheet.md" target="_blank" rel="noopener"><span class="tag">DATASHEET</span><h4>Manual de operación</h4><p>Instalación, configuración, uso y diagnóstico.</p></a><a class="doc reveal" href="https://github.com/jmadasme/teltonika-lp104/blob/main/docs/developer.md" target="_blank" rel="noopener"><span class="tag">DEVELOPER</span><h4>Guía de código</h4><p>Arquitectura, módulos, contratos y extensión.</p></a><a class="doc reveal" href="https://github.com/jmadasme/teltonika-lp104/blob/main/docs/REFERENCES.md" target="_blank" rel="noopener"><span class="tag">REFERENCES</span><h4>Referencias</h4><p>Estándares, librerías y fuentes oficiales.</p></a></div>
-</div></section>
+# Verificar arquitectura (debe ser MIPS, NUNCA x86-64)
+file lp104mqttv2
+# Salida esperada:
+#   lp104mqttv2: ELF 32-bit LSB executable, MIPS, MIPS32 rel2 version 1,
+#     statically linked, stripped
+</code></pre>
+<blockquote>
+<p>El Makefile ya exporta <code>STAGING_DIR</code> y usa el toolchain correcto. Verifica <code>file</code> después de
+<strong>cada</strong> compilación. Si ves <code>x86-64</code> o <code>ELF 64-bit</code>, el toolchain no se está usando.</p>
+</blockquote>
+<h3 id="paso-3-preparar-mqtt_configh-defaults-no-sensibles">Paso 3: Preparar <code>mqtt_config.h</code> (defaults no sensibles)</h3>
+<pre><code class="language-bash">cp mqtt_config.h.example mqtt_config.h
+nano mqtt_config.h
+</code></pre>
+<pre><code class="language-c">#define MQTT_BROKER   "www.smartage.cl"      // Host del broker (default no sensible)
+#define MQTT_PORT     1886                    // Puerto del broker (default)
+#define MQTT_CLIENT   "YOUR_MQTT_CLIENT_ID"  // Client ID único por dispositivo
+</code></pre>
+<blockquote>
+<p>⚠️ <strong>V2.1</strong>: <code>mqtt_config.h</code> <strong>ya no contiene</strong> <code>MQTT_USERNAME</code>/<code>MQTT_PASSWORD</code> (secretos).
+Las credenciales van en <code>/etc/lp104mqttv2.conf</code> del router. <code>mqtt_config.h</code> solo define
+defaults de conexión (broker/port/client_id), no sensibles. <code>.gitignore</code> lo excluye igualmente.</p>
+</blockquote>
+<hr/>
+<h2 id="transferencia-al-router">Transferencia al router</h2>
+<h3 id="usando-sshpass-contrasena">Usando sshpass (contraseña)</h3>
+<pre><code class="language-bash">ROUTER_IP=192.168.194.229
+ROUTER_PASS="TU_PASSWORD_ROOT"        # nunca en archivos del repo
 
-<section class="section tight"><div class="wrap"><div class="note reveal"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg><span><strong>Preservación:</strong> las versiones se copiaron sin <code>.git</code>, <code>node_modules</code>, entornos virtuales, compilados ni bases de datos. Los tokens y claves detectados fueron redactados; las plantillas <code>.example</code> se conservan. Las limitaciones conocidas están en la documentación, no escondidas.</span></div></div></section>
+# Transferir binario
+sshpass -p "$ROUTER_PASS" scp lp104mqttv2 root@${ROUTER_IP}:/tmp/
 
+# Verificar arquitectura en el router
+sshpass -p "$ROUTER_PASS" ssh root@${ROUTER_IP} "file /tmp/lp104mqttv2"
+</code></pre>
+<h3 id="usando-clave-ssh-recomendado">Usando clave SSH (recomendado)</h3>
+<pre><code class="language-bash">scp lp104mqttv2 root@192.168.194.229:/tmp/
+ssh root@192.168.194.229 "file /tmp/lp104mqttv2 &amp;&amp; chmod +x /tmp/lp104mqttv2"
+</code></pre>
+<h3 id="verificacion-remota-prueba-rapida-del-binario-v2">Verificación remota (prueba rápida del binario v2)</h3>
+<pre><code class="language-bash">ssh root@192.168.194.229 &lt;&lt; 'EOF'
+file /usr/local/home/root/lp104mqttv2_v2
+/usr/local/home/root/lp104mqttv2_v2 &amp;   # tardará 5-10s; Ctrl+C para salir
+sleep 8
+kill %1
+logread | grep lp104mqttv2 | tail -20
+EOF
+</code></pre>
+<hr/>
+<h2 id="instalacion-como-servicio">Instalación como servicio</h2>
+<h3 id="instalacion-manual">Instalación manual</h3>
+<pre><code class="language-bash">ssh root@192.168.1.2 &lt;&lt; 'EOF'
+cp /tmp/lp104mqttv2 /usr/local/bin/lp104mqttv2        # ruta del init.d (PROG)
+chmod +x /usr/local/bin/lp104mqttv2
+
+# Deshabilitar V1 si existe
+/etc/init.d/lp104mqtt disable 2&gt;/dev/null
+/etc/init.d/lp104mqtt stop 2&gt;/dev/null
+rm -f /usr/local/bin/lp104mqtt
+
+# Habilitar e iniciar el servicio V2
+/etc/init.d/lp104mqttv2 enable
+/etc/init.d/lp104mqttv2 start
+/etc/init.d/lp104mqttv2 status
+EOF
+</code></pre>
+<blockquote>
+<p>⚠️ Si el binario instalado es el <strong>V2.1</strong> (lea credenciales del <code>.conf</code>), asegúrate de que
+<code>/etc/lp104mqttv2.conf</code> exista con <code>user=</code>/<code>pass=</code> antes de iniciar el servicio.</p>
+</blockquote>
+<h3 id="instalacion-con-makefile">Instalación con Makefile</h3>
+<pre><code class="language-bash">make install
+</code></pre>
+<p>El target <code>install</code> ejecuta: compilar → <code>scp</code> del binario a <code>/usr/local/bin/lp104mqttv2</code>,
+init.d a <code>/etc/init.d/lp104mqttv2</code>, banner a <code>/etc/profile.d/99-lp104-banner.sh</code> → desinstalar
+V1 → <code>enable</code> + <code>restart</code> del servicio. (Usa <code>ROUTER_IP</code>/<code>ROUTER_PASS</code>; ver Makefile.)</p>
+<hr/>
+<h2 id="despliegue-v21-make-deploy-v2">Despliegue V2.1: <code>make deploy-v2</code></h2>
+<p>Nuevo target que transfiere el binario V2.1 a la <strong>ruta temporal</strong>
+<code>/usr/local/home/root/lp104mqttv2_v2</code> <strong>sin ejecutarlo</strong>, y despliega el archivo de
+configuración al router:</p>
+<pre><code class="language-bash">make deploy-v2 ROUTER_IP=192.168.194.229
+</code></pre>
+<p>Qué hace:</p>
+<table>
+<thead>
+<tr>
+<th>Paso</th>
+<th>Acción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Compila <code>lp104mqttv2</code> (estático mipsel)</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>scp</code> del binario → <code>/usr/local/home/root/lp104mqttv2_v2</code></td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong><code>.conf</code></strong>: si existe <code>lp104mqttv2.conf</code> <strong>local</strong> (gitignored, credenciales reales) lo sube a <code>/etc/lp104mqttv2.conf</code>; si no, sube la plantilla <code>lp104mqttv2.conf.example</code> (placeholders) e imprime un aviso para que edites el archivo en el router</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>chmod +x</code> del binario; <code>chmod 600</code> del <code>.conf</code></td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>NO ejecuta nada, NO toca init.d, NO reinicia el servicio</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Ejecución manual posterior (ver <a href="#forma-de-operar">Forma de operar</a>):</p>
+<pre><code class="language-bash">/usr/local/home/root/lp104mqttv2_v2
+</code></pre>
+<blockquote>
+<p>Seguridad: el Makefile <strong>nunca contiene credenciales reales</strong>. Las credenciales viven solo en
+el <code>.conf</code> local gitignored (o se editan a mano en el router).</p>
+</blockquote>
+<hr/>
+<h2 id="banner-ssh">Banner SSH</h2>
+<p>El archivo <code>banner/99-lp104-banner.sh</code> se instala en <code>/etc/profile.d/</code> y se muestra al iniciar
+sesión SSH. Contenido (todo estático, no cuelga el login):</p>
+<ul>
+<li>Arte ASCII decorativo y contacto <code>jmadasme@gmail.com</code></li>
+<li>Resumen: "este equipo publica telemetría por MQTT cada 30 s (señal, clientes WiFi, CPU, temp)"</li>
+<li>Identidad web: client id <code>6aaa978111a8892fd2927dcc</code> y tópicos <code>&lt;client&gt;/report/status</code> y
+  <code>&lt;client&gt;/report/online</code> — <strong>sin</strong> nombre del programa ni ubicación del binario</li>
+</ul>
+<p><strong>Fallback</strong>: si <code>/etc/profile</code> de RutOS no sourceara <code>/etc/profile.d/*.sh</code>, añadir el contenido
+a <code>/etc/banner</code>:</p>
+<pre><code class="language-bash">cat banner/99-lp104-banner.sh &gt;&gt; /etc/banner
+</code></pre>
+<hr/>
+<h2 id="configuracion-etclp104mqttv2conf">Configuración: <code>/etc/lp104mqttv2.conf</code></h2>
+<blockquote>
+<p><strong>V2.1 — el mecanismo de configuración principal.</strong> Las credenciales MQTT ya no se compilan;
+se leen en runtime por <code>config_load()</code> desde este archivo en el router.</p>
+</blockquote>
+<h3 id="formato">Formato</h3>
+<p><code>clave=valor</code>, una por línea. Se ignoran líneas vacías y comentarios <code>#</code>. Se recortan espacios
+alrededor de clave y valor. Las claves son <strong>case-sensitive</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Clave</th>
+<th>Obligatoria</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>user</code></td>
+<td>Sí</td>
+<td>Usuario MQTT del broker</td>
+</tr>
+<tr>
+<td><code>pass</code></td>
+<td>Sí</td>
+<td>Password MQTT del broker (<strong>nunca</strong> se loguea)</td>
+</tr>
+<tr>
+<td><code>client_id</code></td>
+<td>No</td>
+<td>Client ID; si se omite usa el default compilado (<code>mqtt_config.h</code>)</td>
+</tr>
+<tr>
+<td><code>broker</code></td>
+<td>No</td>
+<td>Host del broker; si se omite usa el default compilado</td>
+</tr>
+<tr>
+<td><code>port</code></td>
+<td>No</td>
+<td>Puerto (1–65535, validado); si se omite usa el default compilado</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ejemplo-con-placeholders-nunca-credenciales-reales-en-el-repo">Ejemplo con placeholders (nunca credenciales reales en el repo)</h3>
+<pre><code class="language-ini"># /etc/lp104mqttv2.conf — creado por `make deploy-v2` (chmod 600)
+# Formato clave=valor. Cambios NO requieren recompilar; reinicia el proceso.
+
+user=YOUR_MQTT_USERNAME
+pass=YOUR_MQTT_PASSWORD
+
+# Opcionales (si se omiten, se usan los valores de mqtt_config.h):
+#client_id=YOUR_MQTT_CLIENT_ID
+#broker=YOUR_BROKER_HOST
+#port=1886
+</code></pre>
+<h3 id="defaults-compilados-en-mqtt_configh-no-sensibles">Defaults compilados (en <code>mqtt_config.h</code>, no sensibles)</h3>
+<pre><code class="language-c">#define MQTT_BROKER   "www.smartage.cl"
+#define MQTT_PORT     1886
+#define MQTT_CLIENT   "6aaa978111a8892fd2927dcc"
+</code></pre>
+<h3 id="comportamiento-si-falta-el-archivo">Comportamiento si falta el archivo</h3>
+<ul>
+<li><code>config_load()</code> devuelve <code>-1</code> y loguea:
+  <code>WARNING: no existe /etc/lp104mqttv2.conf (...); usando defaults compilados</code></li>
+<li><code>main()</code> detecta <code>user</code>/<code>pass</code> vacíos y loguea:
+  <code>ERROR: credenciales MQTT no configuradas (falta /etc/lp104mqttv2.conf)</code></li>
+<li>El arranque <strong>continúa</strong>, pero el broker rechazará el CONNECT (fallo <strong>visible</strong>, no silencioso).</li>
+</ul>
+<h3 id="rutas-del-archivo-de-configuracion">Rutas del archivo de configuración</h3>
+<ul>
+<li>Ruta por defecto: <code>/etc/lp104mqttv2.conf</code> (macro <code>CONFIG_PATH</code> en <code>lp104mqttv2.c</code>)</li>
+<li>Sobreescribible con la variable de entorno <code>LP104MQTTV2_CONF</code> (usuarios avanzados)</li>
+<li>y/o con el flag de compilación <code>-DCONFIG_PATH="..."</code></li>
+</ul>
+<h3 id="plantillas-del-repo">Plantillas del repo</h3>
+<table>
+<thead>
+<tr>
+<th>Archivo</th>
+<th>Propósito</th>
+<th>¿Versionado?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>lp104mqttv2.conf.example</code></td>
+<td>Plantilla del <code>.conf</code> con placeholders</td>
+<td>Sí</td>
+</tr>
+<tr>
+<td><code>lp104mqttv2.conf</code> (local)</td>
+<td>Credenciales reales usadas por <code>make deploy-v2</code></td>
+<td><strong>No</strong> (<code>.gitignore</code>)</td>
+</tr>
+<tr>
+<td><code>/etc/lp104mqttv2.conf</code> (router)</td>
+<td>Configuración en runtime</td>
+<td>No aplica</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cambiar-credenciales-sin-recompilar">Cambiar credenciales (sin recompilar)</h3>
+<pre><code class="language-bash">ssh root@192.168.1.2
+vi /etc/lp104mqttv2.conf        # editar user=/pass=
+chmod 600 /etc/lp104mqttv2.conf
+killall lp104mqttv2             # o reiniciar el servicio si corresponde
+/usr/local/home/root/lp104mqttv2_v2 &amp;
+logread | grep lp104mqttv2 | tail -10
+</code></pre>
+<hr/>
+<h2 id="tabla-de-perifericos">Tabla de periféricos</h2>
+<h3 id="recursos-que-usa-el-programa">Recursos que usa el programa</h3>
+<table>
+<thead>
+<tr>
+<th>Recurso</th>
+<th>Comando / Ruta</th>
+<th>Uso en el programa</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Señal celular</td>
+<td><code>/usr/sbin/gsmctl -q</code> (módem Quectel EC200A vía gsmd)</td>
+<td>RSSI → <code>signal</code></td>
+</tr>
+<tr>
+<td>Temperatura módem</td>
+<td><code>/usr/sbin/gsmctl -c</code></td>
+<td>décimas de °C → <code>temp</code></td>
+</tr>
+<tr>
+<td>Interfaz WiFi</td>
+<td><code>/bin/ls /sys/class/net/</code> + <code>/usr/bin/iwinfo &lt;iface&gt; assoclist</code></td>
+<td>conteo de clientes → <code>users</code></td>
+</tr>
+<tr>
+<td>CPU</td>
+<td><code>/proc/stat</code> (lectura directa, sin popen)</td>
+<td>delta idle/total → <code>cpu</code></td>
+</tr>
+<tr>
+<td>Logs del sistema</td>
+<td>stderr → procd → <code>logread</code></td>
+<td>diagnóstico</td>
+</tr>
+</tbody>
+</table>
+<h3 id="perifericos-de-la-plataforma-rut200-no-usados-por-este-programa">Periféricos de la plataforma RUT200 (no usados por este programa)</h3>
+<table>
+<thead>
+<tr>
+<th>Periférico</th>
+<th>Ruta / interfaz</th>
+<th>Notas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GPIO</td>
+<td><code>/sys/class/gpio/</code> (export vía RutOS; RUT200: 2 DI, 2 DO)</td>
+<td>el programa NO usa GPIO; interactúa directamente con sysfs</td>
+</tr>
+<tr>
+<td>UART</td>
+<td><code>/dev/ttyS*</code> (consola 115200 baud)</td>
+<td>no usado; accesible vía RutOS</td>
+</tr>
+<tr>
+<td>I2C</td>
+<td>no expuesto por defecto en OpenWrt/RutOS RUT200</td>
+<td>—</td>
+</tr>
+<tr>
+<td>ADC</td>
+<td>no disponible en RUT200 (sin entradas analógicas)</td>
+<td>—</td>
+</tr>
+<tr>
+<td>Módem LTE</td>
+<td><code>/dev/ttyACM*</code> (control AT)</td>
+<td>el programa no toca el módem directamente; usa <code>gsmctl</code></td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="protocolo-de-comunicacion-mqtt">Protocolo de comunicación MQTT</h2>
+<h3 id="version-y-parametros">Versión y parámetros</h3>
+<table>
+<thead>
+<tr>
+<th>Parámetro</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Protocolo</strong></td>
+<td>MQTT 3.1.1 (nivel 4)</td>
+</tr>
+<tr>
+<td><strong>QoS</strong></td>
+<td>0 (at most once), sin retain</td>
+</tr>
+<tr>
+<td><strong>Keepalive</strong></td>
+<td>60s (en campo de CONNECT)</td>
+</tr>
+<tr>
+<td><strong>Intervalo de publicación</strong></td>
+<td>30s (inmediato al conectar/reconectar)</td>
+</tr>
+<tr>
+<td><strong>Clean session</strong></td>
+<td>1</td>
+</tr>
+<tr>
+<td><strong>Conexión</strong></td>
+<td>TCP sin TLS, <code>www.smartage.cl:1886</code> (defaults en <code>mqtt_config.h</code>, overridables por <code>.conf</code>)</td>
+</tr>
+<tr>
+<td><strong>PINGREQ defensivo</strong></td>
+<td>si inactividad ≥ <code>PING_THRESHOLD_S</code> (30s)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="topicos-y-payloads">Tópicos y payloads</h3>
+<table>
+<thead>
+<tr>
+<th>Tópico</th>
+<th>Payload</th>
+<th>Frecuencia</th>
+<th>QoS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>{client_id}/report/online</code></td>
+<td><code>true</code> (string exacto, compatibilidad V1)</td>
+<td>inmediato + cada 30s</td>
+<td>0</td>
+</tr>
+<tr>
+<td><code>{client_id}/report/status</code></td>
+<td>JSON (abajo)</td>
+<td>inmediato + cada 30s</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+<h3 id="formato-json-de-reportstatus-una-linea-sin-espacios">Formato JSON de <code>report/status</code> (una línea, sin espacios)</h3>
+<pre><code class="language-json">{"signal":-72,"users":0,"cpu":12.3,"temp":36.0,"ts":1758000000}
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo</th>
+<th>Rango/valores</th>
+<th>Fuente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>signal</code></td>
+<td>int | null</td>
+<td>−113…−51 (dBm)</td>
+<td><code>gsmctl -q</code> → RSSI</td>
+</tr>
+<tr>
+<td><code>users</code></td>
+<td>int | null</td>
+<td>0…50</td>
+<td><code>iwinfo assoclist</code></td>
+</tr>
+<tr>
+<td><code>cpu</code></td>
+<td>number | null</td>
+<td>0.0…100.0 (%)</td>
+<td><code>/proc/stat</code></td>
+</tr>
+<tr>
+<td><code>temp</code></td>
+<td>number | null</td>
+<td>°C (1 decimal)</td>
+<td><code>gsmctl -c</code> ÷ 10</td>
+</tr>
+<tr>
+<td><code>ts</code></td>
+<td>int</td>
+<td>epoch Unix</td>
+<td><code>time(NULL)</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="paquetes-mqtt-implementados">Paquetes MQTT implementados</h3>
+<table>
+<thead>
+<tr>
+<th>Paquete</th>
+<th>Dirección</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>CONNECT</strong></td>
+<td>Cliente → Broker</td>
+<td>protocol name "MQTT", level 4, clean session, keepalive 60s, username y password desde <code>g_cfg</code></td>
+</tr>
+<tr>
+<td><strong>CONNACK</strong></td>
+<td>Broker → Cliente</td>
+<td>rc=0 éxito; rc 1-5 con mensaje descriptivo en logs</td>
+</tr>
+<tr>
+<td><strong>PUBLISH</strong></td>
+<td>Cliente → Broker</td>
+<td>QoS 0, sin retain; payload <code>"true"</code> o JSON</td>
+</tr>
+<tr>
+<td><strong>PINGREQ</strong></td>
+<td>Cliente → Broker</td>
+<td>keepalive (2 bytes fijos <code>0xC0 0x00</code>)</td>
+</tr>
+<tr>
+<td><strong>PINGRESP</strong></td>
+<td>Broker → Cliente</td>
+<td>leído y descartado por <code>drain_incoming()</code></td>
+</tr>
+<tr>
+<td><strong>DISCONNECT</strong></td>
+<td>—</td>
+<td>no se envía explícitamente; se cierra el socket</td>
+</tr>
+</tbody>
+</table>
+<h3 id="variables-de-tiempo-en-lp104mqttv2c">Variables de tiempo (en <code>lp104mqttv2.c</code>)</h3>
+<table>
+<thead>
+<tr>
+<th>Constante</th>
+<th>Valor</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>REPORT_INTERVAL_S</code></td>
+<td>30</td>
+<td>segundos entre publicaciones</td>
+</tr>
+<tr>
+<td><code>MQTT_KEEPALIVE_S</code></td>
+<td>60</td>
+<td>keepalive MQTT en CONNECT</td>
+</tr>
+<tr>
+<td><code>PING_THRESHOLD_S</code></td>
+<td>30</td>
+<td>umbral para PINGREQ proactivo</td>
+</tr>
+<tr>
+<td><code>CONNECT_TIMEOUT_S</code></td>
+<td>10</td>
+<td>timeout DNS/connect/CONNACK</td>
+</tr>
+<tr>
+<td><code>BACKOFF_INITIAL_S</code></td>
+<td>5</td>
+<td>backoff inicial de reconexión</td>
+</tr>
+<tr>
+<td><code>BACKOFF_MAX_S</code></td>
+<td>60</td>
+<td>backoff máximo</td>
+</tr>
+<tr>
+<td><code>WRITE_TIMEOUT_S</code></td>
+<td>5</td>
+<td>timeout de escritura</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="ejemplos-de-uso-realistas">Ejemplos de uso realistas</h2>
+<h3 id="logs-v21-arranque-normal-con-conf-presente">Logs V2.1 — arranque normal con <code>.conf</code> presente</h3>
+<pre><code>[2026-09-21 10:00:01] [INICIO] lp104mqttv2 — broker www.smartage.cl:1886, intervalos 30s
+[2026-09-21 10:00:01] [INICIO] usuario MQTT: YOUR_MQTT_USERNAME
+[2026-09-21 10:00:01] [INICIO] topic online: 6aaa978111a8892fd2927dcc/report/online
+[2026-09-21 10:00:01] [INICIO] topic status: 6aaa978111a8892fd2927dcc/report/status
+[2026-09-21 10:00:02] [CONECTADO] sesión MQTT establecida con www.smartage.cl:1886
+[2026-09-21 10:00:02] [PUBLICANDO] 6aaa978111a8892fd2927dcc/report/online = "true"
+[2026-09-21 10:00:02] [PUBLICANDO] 6aaa978111a8892fd2927dcc/report/status = {"signal":-72,"users":0,"cpu":12.3,"temp":36.0,"ts":1758000000}
+[2026-09-21 10:00:32] [PUBLICANDO] 6aaa978111a8892fd2927dcc/report/online = "true"
+[2026-09-21 10:00:32] [PUBLICANDO] 6aaa978111a8892fd2927dcc/report/status = {"signal":-70,"users":0,"cpu":8.1,"temp":36.1,"ts":1758000032}
+</code></pre>
+<h3 id="logs-v21-sin-el-archivo-conf-fallo-visible">Logs V2.1 — SIN el archivo <code>.conf</code> (fallo visible)</h3>
+<pre><code>[2026-09-21 10:00:01] [WARNING] no existe /etc/lp104mqttv2.conf (No such file or directory); usando defaults compilados
+[2026-09-21 10:00:01] [ERROR] credenciales MQTT no configuradas (falta /etc/lp104mqttv2.conf)
+[2026-09-21 10:00:01] [INICIO] usuario MQTT: (vacío)
+[2026-09-21 10:00:02] [CONNECT] ...
+[2026-09-21 10:00:02] [ERROR] CONNACK rechazado (código 4): usuario o password incorrectos
+[2026-09-21 10:00:02] [RECONECTANDO] en 5 s
+</code></pre>
+<h3 id="logs-credenciales-invalidas-y-reconexion-con-backoff">Logs — credenciales inválidas y reconexión con backoff</h3>
+<pre><code>[2026-09-21 10:05:00] [ERROR] CONNACK rechazado (código 4): usuario o password incorrectos
+[2026-09-21 10:05:00] [RECONECTANDO] en 10 s
+[2026-09-21 10:05:10] [ERROR] CONNACK rechazado (código 4): usuario o password incorrectos
+[2026-09-21 10:05:10] [RECONECTANDO] en 20 s
+</code></pre>
+<h3 id="datos-mqtt-vistos-desde-un-suscriptor-mosquitto_sub">Datos MQTT vistos desde un suscriptor (mosquitto_sub)</h3>
+<pre><code class="language-bash">mosquitto_sub -h www.smartage.cl -p 1886 \
+  -u "YOUR_MQTT_USERNAME" -P "YOUR_MQTT_PASSWORD" \
+  -t "6aaa978111a8892fd2927dcc/#" -v
+
+# Salida esperada:
+6aaa978111a8892fd2927dcc/report/online true
+6aaa978111a8892fd2927dcc/report/status {"signal":-72,"users":0,"cpu":12.3,"temp":36.0,"ts":1758000000}
+</code></pre>
+<h3 id="prueba-rapida-en-el-router">Prueba rápida en el router</h3>
+<pre><code class="language-bash">ssh root@192.168.194.229
+/usr/local/home/root/lp104mqttv2_v2     # foreground, Ctrl+C para salir
+</code></pre>
+<hr/>
+<h2 id="despliegue-completo-con-makefile">Despliegue completo con Makefile</h2>
+<pre><code class="language-bash"># Variables del router (por env; la password NUNCA en archivos versionados)
+export ROUTER_IP=192.168.194.229
+export ROUTER_PASS="TU_PASSWORD_ROOT"   # o usa clave SSH
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Target</th>
+<th>Descripción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>make</code> / <code>make all</code></td>
+<td>Compila el binario estático mipsel</td>
+</tr>
+<tr>
+<td><code>make install</code></td>
+<td>Compila + despliega servicio (binario + init.d + banner) y desinstala V1</td>
+</tr>
+<tr>
+<td><strong><code>make deploy-v2</code></strong></td>
+<td><strong>V2.1</strong>: transfiere el binario a <code>/usr/local/home/root/lp104mqttv2_v2</code> <strong>sin ejecutarlo</strong> y despliega <code>/etc/lp104mqttv2.conf</code></td>
+</tr>
+<tr>
+<td><code>make test</code></td>
+<td>Ejecuta el binario en el router (foreground 5s)</td>
+</tr>
+<tr>
+<td><code>make log</code></td>
+<td><code>logread | grep lp104mqttv2 | tail -20</code> en el router</td>
+</tr>
+<tr>
+<td><code>make uninstall-v1</code></td>
+<td>Elimina el V1 (<code>lp104mqtt</code>) del router</td>
+</tr>
+<tr>
+<td><code>make clean</code></td>
+<td>Elimina binarios y objetos</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="gestion-remota-por-zerotier-guia-de-flota">Gestión remota por ZeroTier (guía de flota)</h2>
+<p>Para administrar una flota de routers Teltonika por SSH remoto sin servidor central, el proyecto
+incluye una guía completa del piloto ZeroTier validado en el RUT200:</p>
+<p>📄 <strong>Ver <code>docs/zerotier-guide.md</code></strong> — instalación persistente en RutOS, firewall, lo que NO
+funcionó (7 problemas y soluciones), script de aprovisionamiento y validación post-reinicio.
+Resultado: <code>ssh root@&lt;ip_zerotier&gt;</code> desde cualquier lugar, sin abrir puertos en el router.</p>
+<hr/>
+<h2 id="advertencias-y-precauciones">Advertencias y precauciones</h2>
+<h3 id="arquitectura-del-binario">Arquitectura del binario</h3>
+<blockquote>
+<p><strong>⚠️ CRÍTICO: el binario DEBE ser MIPS little-endian (mipsel_24kc)</strong></p>
+</blockquote>
+<p>Si compilas con el <code>gcc</code> del sistema (x86-64) verás en el router:</p>
+<pre><code>-sh: /usr/local/bin/lp104mqttv2: Exec format error
+</code></pre>
+<p><strong>Solución</strong>: usar siempre el toolchain del SDK y verificar <code>file lp104mqttv2</code> → <code>MIPS</code>.</p>
+<h3 id="credenciales-v21">Credenciales (V2.1)</h3>
+<blockquote>
+<p><strong>⚠️ Las credenciales NO se compilan en el binario. NUNCA las pongas en código ni en Makefile.</strong></p>
+</blockquote>
+<ul>
+<li>Van en <code>/etc/lp104mqttv2.conf</code> (router) o en el <code>lp104mqttv2.conf</code> <strong>local gitignored</strong></li>
+<li>La plantilla versionada es <code>lp104mqttv2.conf.example</code> con placeholders <code>YOUR_*</code></li>
+<li>El binario <strong>nunca loguea la password</strong></li>
+<li>Un <code>.conf</code> ausente o con <code>user</code>/<code>pass</code> vacíos es un fallo <strong>visible</strong>: arranca pero el broker
+  rechaza el CONNECT (revísalo en <code>logread</code>)</li>
+</ul>
+<h3 id="client-id-unico">Client ID único</h3>
+<blockquote>
+<p><strong>⚠️ Cada router necesita un client ID MQTT distinto.</strong> Si dos clientes usan el mismo <code>client_id</code>,
+el broker desconectará al primero cuando se conecte el segundo. En este despliegue el client id
+es <code>6aaa978111a8892fd2927dcc</code> (mismo que el V1, para no romper el control web).</p>
+</blockquote>
+<h3 id="directorio-tmp-es-volatil">Directorio <code>/tmp</code> es volátil</h3>
+<blockquote>
+<p><strong>⚠️ <code>/tmp</code> se limpia en cada reinicio</strong> (tmpfs). Usa rutas persistentes:
+<code>/usr/local/bin/</code> (servicio) o <code>/usr/local/home/root/</code> (coexistencia v2).</p>
+</blockquote>
+<h3 id="temperatura-del-mt7628an">Temperatura del MT7628AN</h3>
+<blockquote>
+<p><strong>⚠️ El MT7628AN NO expone sensor de temperatura de CPU.</strong> La temperatura publicada es la del
+módem celular (<code>gsmctl -c</code>). Limitación de hardware, no un bug.</p>
+</blockquote>
+<h3 id="watchdog-y-respawn">Watchdog y respawn</h3>
+<p>El servicio procd usa <code>respawn 3600 5 5</code>: si el proceso falla, procd lo reinicia cada 5s, pero
+deja de reintentar tras 3600s de uptime con crashes (protección contra bucles). El programa no usa
+<code>/dev/watchdog</code>; el keepalive MQTT + PINGREQ cubren la sesión.</p>
+<h3 id="red-y-firewall">Red y firewall</h3>
+<p>El programa necesita salida TCP al broker (<code>www.smartage.cl:1886</code>). Verifica que el firewall no
+bloquee conexiones salientes:</p>
+<pre><code class="language-bash">iptables -L -n | grep -i output
+nc -zv www.smartage.cl 1886
+</code></pre>
+<h3 id="permisos-y-coexistencia">Permisos y coexistencia</h3>
+<ul>
+<li><code>chmod +x</code> a los binarios (<code>/usr/local/bin/lp104mqttv2</code>, <code>/usr/local/home/root/lp104mqttv2_v2</code>)</li>
+<li><code>chmod 600</code> a <code>/etc/lp104mqttv2.conf</code></li>
+<li>El servicio activo y el v2 <strong>coexisten</strong>; <code>make deploy-v2</code> NO reinicia nada.</li>
+</ul>
+<hr/>
+<h2 id="referencias-oficiales-teltonika">Referencias oficiales Teltonika</h2>
+<table>
+<thead>
+<tr>
+<th>Recurso</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Teltonika Wiki — Software Development Kit</strong></td>
+<td>https://wiki.teltonika-networks.com/view/Software_Development_Kit</td>
+</tr>
+<tr>
+<td><strong>GPL Code Center</strong></td>
+<td>https://wiki.teltonika-networks.com/view/GPL_Code_Center</td>
+</tr>
+<tr>
+<td><strong>RUT200 Datasheet</strong></td>
+<td>https://wiki.teltonika-networks.com/view/RUT200_Datasheet</td>
+</tr>
+<tr>
+<td><strong>RutOS Manual</strong></td>
+<td>https://wiki.teltonika-networks.com/view/RutOS_Manual</td>
+</tr>
+<tr>
+<td><strong>RutOS GSM Control Commands (gsmctl)</strong></td>
+<td>https://wiki.teltonika-networks.com/view/RutOS_GSM_Control_Commands</td>
+</tr>
+<tr>
+<td><strong>OpenWrt 21.02 ramips (SDK)</strong></td>
+<td>https://downloads.openwrt.org/releases/21.02.0/targets/ramips/mt76x8/</td>
+</tr>
+<tr>
+<td><strong>MQTT 3.1.1 Spec (OASIS)</strong></td>
+<td>https://docs.oasis-open.org/mqtt/mqtt/v3.1.1/os/mqtt-v3.1.1-os.html</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="licencia">Licencia</h2>
+<p>Proyecto privado — consulte con el autor para licenciamiento.</p>
+<p><strong>Contacto</strong>: jmadasme@gmail.com</p></div></div></section>
+<section class="section tight"><div class="wrap"><div class="section-head reveal"><div class="kicker">Lo que no funcionó</div><h2>Los tropiezos, documentados</h2><p class="section-sub">Las primeras versiones existen para que estos errores no se repitan: cada una dejó una decisión de diseño verificable.</p></div><div class="fail-grid reveal"><div class="fail"><div class="v">lp104MqttTeltonika</div><h3>Credenciales dentro del binario</h3><p>La primera versión compilaba usuario y contraseña del broker en mqtt_config.h, de modo que cambiar de red o rotar la clave obligaba a recompilar y redistribuir el ejecutable. La V2 lee los valores desde /etc/lp104mqttv2.conf con permisos 600 y deja el binario sin secretos.</p></div><div class="fail"><div class="v">lp104MqttTeltonikaV2</div><h3>MQTT en claro y sin confirmación</h3><p>El cliente usa el puerto 1886 sin TLS porque replica el comportamiento del firmware original, y publica con QoS 0 y sin retain, por lo que un mensaje puede perderse sin aviso. El datasheet lo declara y sugiere el puerto 8883 con TLS para producción.</p></div></div></div></section><section class="section tight"><div class="wrap"><div class="section-head reveal"><div class="kicker">Ficha de evaluación</div><h2>Cómo se mide este proyecto</h2><p class="section-sub">Seis criterios con la misma escala en todo el catálogo, para comparar sin marketing.</p></div><div class="rating-head reveal"><div class="rating-avg">3.7<small>/5</small></div><div><strong>Madurez global</strong><p>Cliente MQTT pequeño y operativamente completo para un router industrial, con documentación extensa. Su límite está en la seguridad del transporte y en la escasez de métricas.</p></div></div><div class="rating reveal"><div class="rating-row"><div class="rating-name">Madurez</div><div class="rating-bar"><i style="width:60%"></i></div><div class="rating-score">3/5</div><div class="rating-note">Dos versiones, servicio procd con respawn y backoff; la telemetría se limita a cuatro métricas.</div></div><div class="rating-row"><div class="rating-name">Reproducibilidad</div><div class="rating-bar"><i style="width:60%"></i></div><div class="rating-score">3/5</div><div class="rating-note">Makefile y SDK documentados; la ruta del SDK está fijada a un directorio local que debe ajustarse.</div></div><div class="rating-row"><div class="rating-name">Documentación</div><div class="rating-bar"><i style="width:100%"></i></div><div class="rating-score">5/5</div><div class="rating-note">Datasheet de 758 líneas con tópicos, payload, tiempos, logs y resolución de problemas paso a paso.</div></div><div class="rating-row"><div class="rating-name">Honestidad de límites</div><div class="rating-bar"><i style="width:80%"></i></div><div class="rating-score">4/5</div><div class="rating-note">Declara ausencia de TLS, QoS 0 y dependencia de gsmctl, sin ocultar el riesgo de pérdida.</div></div><div class="rating-row"><div class="rating-name">Valor demostrativo</div><div class="rating-bar"><i style="width:80%"></i></div><div class="rating-score">4/5</div><div class="rating-note">Contrasta dos formas de manejar secretos en el mismo equipo y con el mismo protocolo.</div></div><div class="rating-row"><div class="rating-name">Facilidad de despliegue</div><div class="rating-bar"><i style="width:60%"></i></div><div class="rating-score">3/5</div><div class="rating-note">make install resuelve compilación y copia, pero exige SDK MIPS, SSH root y credenciales previas en el router.</div></div></div></div></section><section class="section tight"><div class="wrap"><div class="section-head reveal"><div class="kicker">Preguntas típicas</div><h2>Lo que suelen preguntar</h2></div><div class="faq reveal"><details><summary>¿Qué versión uso?</summary><p>V2: configuración externa y Makefile. La primera queda como referencia.</p></details><details><summary>¿Dónde se guardan las credenciales?</summary><p>En /etc/lp104mqttv2.conf, fuera del binario y del repositorio.</p></details><details><summary>¿Funciona en otro router?</summary><p>El código es portable, pero el binario debe recompilarse para la arquitectura destino.</p></details><details><summary>¿Necesito ZeroTier?</summary><p>No. Es una alternativa para administración remota.</p></details><details><summary>¿Publica solo o se suscribe?</summary><p>La familia se centra en publicar telemetría; revisá el código para el contrato exacto.</p></details></div></div></section>
 <section class="cta"><div class="wrap"><div class="cta-box reveal">
   <div class="kicker">Siguiente paso</div><h2>¿Te animás?</h2>
   <p>Usá esta familia como base para teltonika lp104. Está documentada para que puedas entenderla, ejecutarla y continuarla sin adivinar.</p>

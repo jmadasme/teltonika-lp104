@@ -34,6 +34,56 @@ make
 
 El SDK del router no se incluye. La configuración real y las credenciales deben crearse en el equipo, no en el repositorio.
 
+<!-- ficha -->
+## Ficha de evaluación
+
+**Madurez global: 3.7/5**
+
+| Criterio | Nota | Evidencia |
+|---|---:|---|
+| Madurez | 3/5 | Dos versiones, servicio procd con respawn y backoff; la telemetría se limita a cuatro métricas. |
+| Reproducibilidad | 3/5 | Makefile y SDK documentados; la ruta del SDK está fijada a un directorio local que debe ajustarse. |
+| Documentación | 5/5 | Datasheet de 758 líneas con tópicos, payload, tiempos, logs y resolución de problemas paso a paso. |
+| Honestidad de límites | 4/5 | Declara ausencia de TLS, QoS 0 y dependencia de gsmctl, sin ocultar el riesgo de pérdida. |
+| Valor demostrativo | 4/5 | Contrasta dos formas de manejar secretos en el mismo equipo y con el mismo protocolo. |
+| Facilidad de despliegue | 3/5 | make install resuelve compilación y copia, pero exige SDK MIPS, SSH root y credenciales previas en el router. |
+
+Cliente MQTT pequeño y operativamente completo para un router industrial, con documentación extensa. Su límite está en la seguridad del transporte y en la escasez de métricas.
+
+## Lo que no funcionó
+
+### lp104MqttTeltonika — Credenciales dentro del binario
+
+La primera versión compilaba usuario y contraseña del broker en mqtt_config.h, de modo que cambiar de red o rotar la clave obligaba a recompilar y redistribuir el ejecutable. La V2 lee los valores desde /etc/lp104mqttv2.conf con permisos 600 y deja el binario sin secretos.
+
+### lp104MqttTeltonikaV2 — MQTT en claro y sin confirmación
+
+El cliente usa el puerto 1886 sin TLS porque replica el comportamiento del firmware original, y publica con QoS 0 y sin retain, por lo que un mensaje puede perderse sin aviso. El datasheet lo declara y sugiere el puerto 8883 con TLS para producción.
+
+## Preguntas típicas
+
+**¿Qué versión uso?**
+
+V2: configuración externa y Makefile. La primera queda como referencia.
+
+**¿Dónde se guardan las credenciales?**
+
+En /etc/lp104mqttv2.conf, fuera del binario y del repositorio.
+
+**¿Funciona en otro router?**
+
+El código es portable, pero el binario debe recompilarse para la arquitectura destino.
+
+**¿Necesito ZeroTier?**
+
+No. Es una alternativa para administración remota.
+
+**¿Publica solo o se suscribe?**
+
+La familia se centra en publicar telemetría; revisá el código para el contrato exacto.
+
+<!-- /ficha -->
+
 ## Documentación
 
 - [`docs/datasheet.md`](docs/datasheet.md) — instalación, operación y límites.
@@ -41,9 +91,9 @@ El SDK del router no se incluye. La configuración real y las credenciales deben
 - [`docs/REFERENCES.md`](docs/REFERENCES.md) — estándares, librerías y fuentes.
 - [`docs/index.html`](docs/index.html) — página del proyecto (GitHub Pages).
 
-## Alcance y honestidad
+## El proyecto en detalle
 
-## LP104 MQTT Teltonika V2
+### LP104 MQTT Teltonika V2
 
 **Telemetría MQTT para routers Teltonika RUT200 — Cliente MQTT 3.1.1 en C puro para OpenWrt/RutOS**
 
