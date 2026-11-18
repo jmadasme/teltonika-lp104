@@ -205,12 +205,14 @@ h2{font-size:clamp(30px,4vw,46px);line-height:1.05;letter-spacing:-.04em;margin:
 
 </style>
 <link rel="stylesheet" href="assets/community.css?v=1">
+<link href="rec/player.css?v=1" rel="stylesheet"/>
 </head>
 <body>
 <header class="nav"><div class="wrap nav-in">
   <a class="brand" href="/"><span class="brand-mark"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 2 9 5-9 5-9-5 9-5z"/><path d="m3 12 9 5 9-5M3 17l9 5 9-5"/></svg></span><span>jmadasme<span style="color:var(--accent)">.</span>portfolio</span></a>
   <nav class="nav-links">
-    <a href="#proyecto">Proyecto</a><a href="#versiones">Versiones</a><a href="#stack">Stack</a><a href="#docs">Docs</a><a href="#comunidad">Comunidad</a>
+    <a href="#proyecto">Proyecto</a><a href="#versiones">Versiones</a><a href="#stack">Stack</a><a href="#video">Video</a>
+<a href="#docs">Docs</a><a href="#comunidad">Comunidad</a>
     <a class="btn btn-ghost" style="padding:9px 15px" href="/iot/">← IoT</a>
   </nav>
 </div></header>
@@ -242,6 +244,45 @@ h2{font-size:clamp(30px,4vw,46px);line-height:1.05;letter-spacing:-.04em;margin:
     <div class="card reveal"><span class="tag">Solución</span><h3>La propuesta</h3><p>Un cliente C pequeño, compilado para la arquitectura del RUT200, con la configuración separada en un archivo del sistema en la V2.</p></div>
   </div>
 </div></section>
+
+
+<section class="section tight rec-section" id="video" style="--accent:#2E7DFF;--accent2:#14F195">
+<div class="wrap">
+<div class="rec-kicker">REC · VIDEO · 3:07</div>
+<h2 class="rec-h2">Cliente MQTT en C para el router Teltonika</h2>
+<p class="rec-lead">Cliente MQTT escrito en C para el RUT200: socket TCP, paquetes 3.1.1 armados byte a byte y un JSON de telemetría cada 30 segundos.</p>
+<div class="rec-banner">
+<span class="rec-banner-icon">📋</span>
+<strong>Puedes copiar y pegar los comandos del video desde el video !!!</strong>
+<span>Pausá, seleccioná el texto de la terminal y copiá.</span>
+</div>
+<div class="rec-shell">
+<div class="rec-bar"><i></i><i></i><i></i><span class="rec-title">Cliente MQTT en C para el router Teltonika · asciinema</span><span class="rec-rec"><b></b>REC</span></div>
+<div class="rec-screen-wrap">
+<div class="rec-screen" id="rec-screen"></div>
+<div class="rec-poster" id="rec-poster">
+<div class="rec-kicker">ASCIINEMA · 3:07</div>
+<h3>Cliente MQTT en C para el router Teltonika</h3>
+<p>Cliente MQTT escrito en C para el RUT200: socket TCP, paquetes 3.1.1 armados byte a byte y un JSON de telemetría cada 30 segundos.</p>
+<div class="rec-poster-meta">teltonika-lp104 · código real</div>
+<button class="rec-btn rec-primary" id="rec-start" type="button">▶ Reproducir</button>
+</div>
+</div>
+<div class="rec-controls">
+<button class="rec-btn rec-primary" id="rec-play" type="button">▶ Reproducir</button>
+<button class="rec-btn" id="rec-restart" type="button">↺ Reiniciar</button>
+<input class="rec-progress" id="rec-range" type="range" min="0" max="1000" value="0" aria-label="Progreso"/>
+<span class="rec-time" id="rec-time">0:00 / 3:07</span>
+<select class="rec-speed" id="rec-speed" aria-label="Velocidad"><option value="1">1×</option><option value="1.25">1.25×</option><option value="1.5">1.5×</option><option value="2">2×</option></select>
+<button class="rec-btn" id="rec-full" type="button" title="Pantalla completa">⛶</button>
+<button class="rec-btn" id="rec-copy" type="button">⧉ Copiar comandos</button>
+<a class="rec-download" href="rec/teltonika-lp104.cast" download>descargar .cast</a>
+</div>
+</div>
+<p class="rec-note">Los fragmentos corresponden al código real del repositorio; los valores de broker y credenciales son marcadores, no configuraciones activas.</p>
+<div class="rec-chapters"><span class="rec-chip"><b>0:06</b> EL PROBLEMA</span><span class="rec-chip"><b>0:22</b> ARQUITECTURA</span><span class="rec-chip"><b>0:36</b> CONFIGURACIÓN</span><span class="rec-chip"><b>0:49</b> VALIDACIÓN</span><span class="rec-chip"><b>1:04</b> EL NÚCLEO</span><span class="rec-chip"><b>1:21</b> PROTOCOLO</span><span class="rec-chip"><b>1:32</b> MÉTRICAS</span><span class="rec-chip"><b>1:49</b> JSON</span><span class="rec-chip"><b>2:03</b> PUBLICACIÓN</span><span class="rec-chip"><b>2:16</b> CONCURRENCIA</span><span class="rec-chip"><b>2:33</b> SERVICIO</span><span class="rec-chip"><b>2:45</b> CÓMO EJECUTARLO</span></div>
+</div>
+</section>
 
 <section class="section" id="versiones"><div class="wrap">
   <div class="section-head reveal"><div class="kicker">02 — Versiones</div><h2>La historia, completa.</h2><p class="section-sub">Cada carpeta conserva una etapa del proyecto. No se borraron las anteriores: se pusieron en contexto.</p></div>
@@ -1353,5 +1394,7 @@ nc -zv www.smartage.cl 1886
 <script>window.PORTFOLIO_COMMUNITY={account:"jmadasme",repo:"teltonika-lp104",coinNamespace:"jmadasme-teltonika-lp104-coins-v1",faqs:[{"q": "¿Qué versión uso?", "a": "V2: configuración externa y Makefile. La primera queda como referencia."}, {"q": "¿Dónde se guardan las credenciales?", "a": "En /etc/lp104mqttv2.conf, fuera del binario y del repositorio."}, {"q": "¿Funciona en otro router?", "a": "El código es portable, pero el binario debe recompilarse para la arquitectura destino."}, {"q": "¿Necesito ZeroTier?", "a": "No. Es una alternativa para administración remota."}, {"q": "¿Publica solo o se suscribe?", "a": "La familia se centra en publicar telemetría; revisá el código para el contrato exacto."}]};</script>
 <script src="assets/community.js?v=2" defer></script>
 
+<script defer src="rec/teltonika-lp104.cast.js?v=1"></script>
+<script defer src="rec/player.js?v=1"></script>
 </body>
 </html>
